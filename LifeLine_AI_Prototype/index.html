@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LifeLine AI | Emergency Information Rescue System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="logo">✚</div><div><small>EMERGENCY INFORMATION RESCUE SYSTEM</small><h1>LifeLine <span>AI</span></h1></div><b class="tag">STUDENT DEMO</b></header>
+<main>
+<section class="hero"><div><span class="pill">HELP STARTS WITH CLEAR INFORMATION</span><h2>Every detail can help<br><em>someone respond faster.</em></h2><p>Organize emergency details, identify missing information, and prepare a clear incident summary.</p></div><div class="hero-icon">✚</div></section>
+<div class="notice"><b>Prototype notice:</b> This demo does not contact emergency services, track live location, or send information anywhere. For a real emergency in India, call <b>112</b>.</div>
+<div class="layout">
+<form class="panel" id="incidentForm">
+<div class="heading"><strong>01</strong><div><h3>Incident information</h3><p>Enter the details you know.</p></div></div>
+<label for="incidentType">Type of emergency <i>*</i></label><select id="incidentType" required><option value="">Choose an emergency type</option><option>Medical emergency</option><option>Road accident</option><option>Fire</option><option>Person missing</option><option>Flood or natural disaster</option><option>Other emergency</option></select>
+<label for="location">Location or landmark <i>*</i></label><input id="location" required placeholder="e.g., near the bus stand, main road">
+<div class="twocol"><div><label for="people">People affected</label><select id="people"><option value="">Not sure</option><option>1 person</option><option>2–3 people</option><option>4–10 people</option><option>More than 10</option></select></div><div><label for="urgency">Current condition</label><select id="urgency"><option value="">Not known</option><option>Critical / immediate danger</option><option>Serious</option><option>Stable</option><option>Not sure</option></select></div></div>
+<label for="access">Access route or nearby landmark</label><input id="access" placeholder="e.g., entrance from the north gate">
+<label for="obstacles">Road, crowd, or access obstacles</label><input id="obstacles" placeholder="e.g., road blocked, heavy crowd, none known">
+<label for="assistance">Assistance needed</label><select id="assistance"><option value="">Not sure yet</option><option>Ambulance / medical help</option><option>Fire and rescue</option><option>Police assistance</option><option>Search and rescue</option><option>Multiple types of help</option><option>Other</option></select>
+<label for="details">Additional details</label><textarea id="details" rows="3" placeholder="Share useful facts you know. Avoid guessing."></textarea>
+<button type="submit">Check missing information <span>→</span></button><p class="footnote">Fields marked * are required. Do not delay contacting emergency services to fill out this form.</p>
+</form>
+<aside class="panel">
+<div class="heading"><strong class="green">02</strong><div><h3>Information check</h3><p>Review the details and questions.</p></div></div>
+<div id="emptyState" class="empty"><div class="magnify">⌕</div><h4>Your incident summary will appear here</h4><p>Complete the form to identify details that may still be needed.</p></div>
+<div id="results" class="hidden" aria-live="polite"><div id="status" class="status"></div><h4>Questions to clarify</h4><ul id="questions"></ul><h4>Incident summary</h4><pre id="summary"></pre><button type="button" class="secondary" id="copy">Copy summary</button><p id="copyStatus" class="copy-status"></p></div>
+</aside>
+</div>
+<section class="steps"><div><b>1</b><h4>Collect</h4><p>Record known incident facts.</p></div><div><b>2</b><h4>Check</h4><p>Spot missing or unclear details.</p></div><div><b>3</b><h4>Summarize</h4><p>Prepare a readable handoff note.</p></div></section>
+<footer>LifeLine AI · Educational prototype · Not a substitute for professional emergency response</footer>
+</main>
+<script src="script.js"></script>
+</body></html>
